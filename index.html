@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CRIU inside Javascript PC Emulator</title>
+<style>
+.term {
+    font-family: courier,fixed,swiss,monospace,sans-serif;
+    font-size: 14px;
+    color: #f0f0f0;
+    background: #000000;
+}
+
+.termReverse {
+    color: #000000;
+    background: #00ff00;
+}
+#note {
+    font-size: 12px;
+}
+#copyright {
+    font-size: 10px;
+}
+#clipboard {
+    font-size: 12px;
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69551427-15', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="likely.js"></script>
+<link rel="stylesheet" href="likely.css">
+
+</head>
+<body onload="start()">
+
+<h1>Checkpoint and Restore In Userspace demonstration</h1>
+
+<p>Follow Us</p>
+<div class="likely">
+  <div class="twitter">Twitter</div>
+  <div class="facebook">Facebook</div>
+  <div class="gplus">Google Plus</div>
+</div>
+
+<table border="0">
+<tr valign="top"><td>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="term.js"></script>
+<script type="text/javascript" src="cpux86.js"></script>
+<script type="text/javascript" src="jslinux.js"></script>
+<!--
+<div id="copyright">&copy; 2011 Fabrice Bellard - <a href="news.html">News</a> - <a href="faq.html">FAQ</a> - <a href="tech.html">Technical notes</a></div>
+-->
+
+<div id="copyright">Used with permission from Fabrice Bellard &copy; 2011 - See <a href="http://bellard.org" rel="nofollow">bellard.org</a> for JSLinux details.</div>
+
+<td><input type="button" value="Clear clipboard" onclick="clear_clipboard();"><br><textarea row="4" cols="16" id="text_clipboard"></textarea>
+</table>
+
+<div class="likely">
+  <div class="twitter">Twitter</div>
+  <div class="facebook">Facebook</div>
+  <div class="gplus">Google Plus</div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = 'http://ligurio.github.io/jslinux-criu-demo/';
+this.page.identifier = 100000009;
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//ligurio.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>
