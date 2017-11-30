@@ -50,7 +50,7 @@ The disk image contains a filesystem generated with Buildroot using BusyBox.
 We should setup [buildroot](http://buildroot.uclibc.org/download.html)
 and create HDD with CRIU binary and other utilities inside.
 
-````
+```
 wget http://buildroot.uclibc.org/downloads/buildroot-2015.02.tar.gz
 tar xzvf buildroot-2015.02.tar.gz
 ```
